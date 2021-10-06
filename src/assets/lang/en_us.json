@@ -1,0 +1,13 @@
+{
+    "navbar": {
+        "home": "Home",
+        "about": "About",
+        "info": "NSYSUA",
+        "result": "Results",
+        "event_list": "Event List",
+        "nfac": "NFAC",
+        "niac": "NIAC",
+        "chcw": "CHCW",
+        "recruit": "Join us"
+    }
+}

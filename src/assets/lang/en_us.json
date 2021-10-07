@@ -2,12 +2,17 @@
     "navbar": {
         "home": "Home",
         "about": "About",
-        "info": "NSYSUA",
+        "info": "NSYSU Athletics",
         "result": "Results",
         "event_list": "Event List",
         "nfac": "NFAC",
         "niac": "NIAC",
         "chcw": "CHCW",
+        "siac": "SIAC",
         "recruit": "Join us"
+    },
+    "homepage": {
+        "news": "Latest news",
+        "fb_timeline": "Facebook Timeline"
     }
 }

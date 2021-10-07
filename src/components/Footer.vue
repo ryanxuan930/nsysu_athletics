@@ -6,12 +6,12 @@
                 <div class="ml-5">
                     <div v-if="lang_code!='ja_JP'" class="text-2xl font-bold">國立中山大學田徑校隊</div>
                     <div v-else class="text-2xl font-bold">国立中山大学陸上競技部</div>
-                    <div class="text-xs">National Sun Yut-sen University Athletics Team</div>
+                    <div class="text-xs">National Sun Yat-sen University Athletics Team</div>
                 </div>
             </div>
             <div class="m-2 block w-full">
                 <div v-if="lang_code=='zh_TW'">804 高雄市鼓山區蓮海路70號<br>中山大學田徑場西南側</div>
-                <div v-if="lang_code=='en_US'">National Sun Yut-sen University<br> No.70 Lianhai Rd., Kaohsiung City 804, Taiwan</div>
+                <div v-if="lang_code=='en_US'">National Sun Yat-sen University<br> No.70 Lianhai Rd., Kaohsiung City 804, Taiwan</div>
                 <div v-if="lang_code=='ja_JP'">804 高雄市鼓山区蓮海路70号<br>中山大学トラックより南西側</div>
                 <div>(07)525-2000</div>
             </div>
@@ -25,7 +25,7 @@
 </template>
 
 <script lang="ts">
-import {ref, watch, computed} from 'vue'
+import {computed} from 'vue'
 import { useStore } from 'vuex'
 export default {
     name: 'Footer',

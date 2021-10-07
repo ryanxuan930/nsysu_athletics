@@ -8,6 +8,11 @@
         "nfac": "新生盃",
         "niac": "系際盃",
         "chcw": "正興城灣盃",
+        "siag": "南臺灣大學田徑交流賽",
         "recruit": "招募資訊"
+    },
+    "homepage": {
+        "news": "最新消息",
+        "fb_timeline": "Facebook 動態"
     }
 }

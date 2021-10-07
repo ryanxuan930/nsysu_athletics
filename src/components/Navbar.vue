@@ -7,18 +7,18 @@
                 <div>
                     <div v-if="lang_code!='ja_JP'" class="mx-3 text-2xl text-white font-bold">國立中山大學田徑校隊</div>
                     <div v-else class="mx-3 text-2xl text-white font-bold">国立中山大学陸上競技部</div>
-                    <div class="mx-3 text-sm text-white font-medium">National Sun Yut-sen University Athletics Team</div> 
+                    <div class="mx-3 text-sm text-white font-medium">National Sun Yat-sen University Athletics Team</div> 
                 </div>
             </div>
         </router-link>
         <div class="flex-grow"></div>
         <!--nav-->
-        <div class="hidden lg:inline-block text-center text-2xl links font-bold">
+        <div class="hidden lg:inline-block text-center text-2xl links font-medium">
             <router-link to="/">{{ lang_dict.navbar.home }}</router-link>
             <div class="relative inline-block">
                 <a @click="sub_nav = (sub_nav==1 ? 0 : 1)">{{ lang_dict.navbar.event_list }}</a>
                 <div v-show="sub_nav==1" class="absolute bg-yellow-600 text-white top-20 right-0 p-5 rounded shadow duration-300" style="width:max-content">
-                    <router-link class="block" @click="sub_nav=0" to="">{{ lang_dict.navbar.nfac }}</router-link>
+                    <router-link class="block" @click="sub_nav=0" to="/nfac">{{ lang_dict.navbar.nfac }}</router-link>
                     <router-link class="block" @click="sub_nav=0" to="">{{ lang_dict.navbar.niac }}</router-link>
                     <router-link class="block" @click="sub_nav=0" to="">{{ lang_dict.navbar.chcw }}</router-link>
                 </div>
@@ -54,7 +54,7 @@
             </a>
             <div class="block lg:hidden text-center text-4xl font-cwt font-bold text-white links" style="margin: 100px auto">
                 <router-link @click="mobile_nav_open=false" to="/">{{ lang_dict.navbar.home }}</router-link>
-                <router-link @click="mobile_nav_open=false" to="">{{ lang_dict.navbar.nfac }}</router-link>
+                <router-link @click="mobile_nav_open=false" to="/nfac">{{ lang_dict.navbar.nfac }}</router-link>
                 <router-link @click="mobile_nav_open=false" to="">{{ lang_dict.navbar.niac }}</router-link>
                 <router-link @click="mobile_nav_open=false" to="">{{ lang_dict.navbar.chcw }}</router-link>
                 <router-link @click="mobile_nav_open=false" to="/about">{{ lang_dict.navbar.about }}</router-link>

@@ -5,9 +5,14 @@
         "info": "インフォ",
         "result": "競技結果報告",
         "event_list": "大会情報",
-        "nfac": "フレッシュマンカップ",
+        "nfac": "フレッシュマン陸上競技大会",
         "niac": "学部間陸上競技交流大会",
         "chcw": "正興城湾カップ",
+        "siac": "南台湾大学陸上競技大会",
         "recruit": "入部案内"
+    },
+    "homepage": {
+        "news": "ニュース",
+        "fb_timeline": "Facebookタイムライン"
     }
 }

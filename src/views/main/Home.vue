@@ -1,9 +1,22 @@
 <template>
-    <SlideShow :slide-Data="slide_data"></SlideShow>
     <Container class="text-gray-700">
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
             <div class="col-span-1 lg:col-span-2">
-                <div class="text-2xl">最新消息</div>
+                <Countdown :lang-code="lang_code"></Countdown>
+                <table id="event_button">
+                    <tr>
+                        <td>
+                            <div @click="$router.push('/nfac')">{{ lang_dict.navbar.nfac }}</div>
+                        </td>
+                        <td>
+                            <div>{{ lang_dict.navbar.niac }}</div>
+                        </td>
+                        <td>
+                            <div>{{ lang_dict.navbar.chcw }}</div>
+                        </td>
+                    </tr>
+                </table>
+                <div class="text-2xl">{{ lang_dict.homepage.news }}</div>
                 <hr>
                     <div class="p-2 flex hover:bg-yellow-50 cursor-pointer items-center">
                         <div class="inline-block" style="white-space: nowrap;">
@@ -18,7 +31,7 @@
                 </template>
             </div>
             <div>
-                <div class="text-2xl">Facebook 動態</div>
+                <div class="text-2xl">{{ lang_dict.homepage.fb_timeline }}</div>
                 <hr>
                 <div class="fb-page" data-href="https://www.facebook.com/NSYSUAthletics" data-tabs="timeline" data-width="" data-height="" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/NSYSUAthletics" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/NSYSUAthletics">國立中山大學田徑校隊</a></blockquote></div>
             </div>
@@ -28,28 +41,43 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import SlideShow from "@/components/home/SlideShow.vue"
 import Container from "@/components/Container.vue"
+import Countdown from "@/components/home/Countdown.vue"
+import langDict from "@/components/language"
+import { ref, watch, computed} from "vue"
+import { useStore } from 'vuex'
 
 export default defineComponent({
     name: 'Home',
     setup() {
-        const slide_data = [
-            "/assets/slideshow/01.jpg",
-            "/assets/slideshow/02.jpg",
-            "/assets/slideshow/03.jpg",
-            "/assets/slideshow/04.jpg",
-            "/assets/slideshow/05.jpg",
-            "/assets/slideshow/06.jpg",
-            "/assets/slideshow/07.jpg"
-        ];
+        //vuex
+        const store = useStore()
+        //language
+        var lang_code = computed(() => store.state.lang_code);
+        var lang_dict = ref(langDict(lang_code.value));
+        watch(lang_code, ()=>{
+            lang_dict.value = langDict(lang_code.value);
+        });
         return { 
-            slide_data,
+            lang_dict,
+            lang_code,
         }
     },
     components: {
-        SlideShow,
         Container,
+        Countdown,
     },
 });
 </script>
+
+<style lang="less" scoped>
+#event_button{
+    @apply border-collapse w-full my-3;
+    td {
+        @apply p-0;
+    }
+    div  {
+        @apply text-white border-0 w-full bg-yellow-600 p-3 text-center text-xl cursor-pointer hover:bg-yellow-500 duration-300;
+    }
+}
+</style>

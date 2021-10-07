@@ -2,7 +2,7 @@
     <Carousel :autoplay="3000" :wrap-around="true">
         <Slide v-for="slide in slideData" :key="slide">
             <div class="carousel__item">
-                <img class="block" style="width: 100%; min-height: 300px; object-fit:cover;" :src="slide">
+                <img class="block" style="width: 100%; object-position:center, center; object-fit:cover;" :src="slide">
             </div>
         </Slide>
         <template #addons>
@@ -26,12 +26,20 @@ export default defineComponent({
 });
 </script>
 
-<style>
+<style lang="less">
 .carousel__item {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    img {
+        max-height: 500px !important;
+    }
+    @media screen and (max-width:768px) {
+        img {
+            height: 40%;
+        }
+    }
 }
 .carousel__prev,
 .carousel__next {
@@ -46,4 +54,5 @@ export default defineComponent({
     background-color: #D97706
 ;
 }
+
 </style>

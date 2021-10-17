@@ -70,7 +70,7 @@
 
 <script lang="ts">
 import langDict from "@/components/language"
-import { ref, watch, computed} from "vue"
+import { ref, watch} from "vue"
 import { useStore } from 'vuex'
 export default {
     name: "Navbar",

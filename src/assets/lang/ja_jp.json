@@ -14,5 +14,18 @@
     "homepage": {
         "news": "ニュース",
         "fb_timeline": "Facebookタイムライン"
+    },
+    "nfac": {
+        "registration": "申込ページ",
+        "regulation": "大会要項",
+        "site_map": "会場マップ",
+        "start_list": "スタートリスト",
+        "results": "結果",
+        "announce": "アナウンス",
+        "timetable": "タイムテーブル",
+        "time": "時刻",
+        "phase": "区分",
+        "group": "種別",
+        "event": "種目"
     }
 }

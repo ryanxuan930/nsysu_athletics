@@ -20,10 +20,10 @@
                 <hr>
                     <div class="p-2 flex hover:bg-yellow-50 cursor-pointer items-center">
                         <div class="inline-block" style="white-space: nowrap;">
-                            <div class="py-0.5 px-1 border-2 border-yellow-600 text-yellow-600 rounded">類別</div>
+                            <div class="py-0.5 px-1 border-2 border-yellow-600 text-yellow-600 rounded">置頂</div>
                         </div>
-                        <div class="inline-block ml-2" style="white-space: nowrap;">0000-00-00</div>
-                        <div class="inline-block ml-0 lg:ml-2">公告內容</div>
+                        <div class="inline-block ml-2" style="white-space: nowrap;">2021-10-09</div>
+                        <div class="inline-block ml-0 lg:ml-2">新生盃報名開始，請至「新生盃」查看相關資訊及連結</div>
                     </div>
                     <hr class="mx-2">
                 <template>

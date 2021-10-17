@@ -14,5 +14,18 @@
     "homepage": {
         "news": "最新消息",
         "fb_timeline": "Facebook 動態"
+    },
+    "nfac": {
+        "registration": "報名登入",
+        "regulation": "競賽規程",
+        "site_map": "場地配置",
+        "start_list": "選手編配",
+        "results": "成績資訊",
+        "announce": "賽事公告",
+        "timetable": "賽程資訊",
+        "time": "時間",
+        "phase": "賽別",
+        "group": "組別",
+        "event": "項目"
     }
 }

@@ -4,7 +4,7 @@
         <div v-if="langCode=='zh_TW'" class="bg-yellow-500 text-center text-black mb-2 text-2xl">新生盃田徑錦標賽</div>
         <div v-if="langCode=='ja_JP'" class="bg-yellow-500 text-center text-black mb-2 text-2xl">フレッシュマン陸上競技大会</div>
         <div class="w-full p-1 text-3xl lg:text-5xl text-center bg-black text-yellow-400">
-            <VueCountdown :time="2 * 24 * 60 * 60 * 1000" v-slot="{days,hours,minutes,seconds}">
+            <VueCountdown :time="time" v-slot="{days,hours,minutes,seconds}">
                 <span style="font-family: Digital;">
                     {{ days }} day {{ hours }} hrs {{ minutes }} min {{ seconds }} sec
                 </span>
@@ -15,12 +15,17 @@
 </template>
 
 <script lang="ts">
-import { ref } from "vue"
+import { computed, ref } from "vue"
 import VueCountdown from '@chenfengyuan/vue-countdown';
 export default {
     name: "Countdown",
     setup() {
+        const now:any = new Date();
+        const target_time:any = new Date("2021-10-21 17:00:00");
+        const time_diff = target_time - now;
+        const time = ref(time_diff);
         return {
+            time,
         }
     },
     props: ["langCode"],

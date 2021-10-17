@@ -14,5 +14,18 @@
     "homepage": {
         "news": "Latest news",
         "fb_timeline": "Facebook Timeline"
+    },
+    "nfac": {
+        "registration": "Registration",
+        "regulation": "Regulation",
+        "site_map": "Site Map",
+        "start_list": "Start List",
+        "results": "Results",
+        "announce": "Announcement",
+        "timetable": "Timetable",
+        "time": "Time",
+        "phase": "Phase",
+        "group": "Group",
+        "event": "Event"
     }
 }

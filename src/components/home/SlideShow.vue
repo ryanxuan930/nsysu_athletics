@@ -33,7 +33,7 @@ export default defineComponent({
     justify-content: center;
     align-items: center;
     img {
-        max-height: 500px !important;
+        max-height: 560px !important;
     }
     @media screen and (max-width:768px) {
         img {
